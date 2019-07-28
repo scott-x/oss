@@ -1,8 +1,8 @@
 /*
 * @Author: scottxiong
 * @Date:   2019-07-29 01:28:21
-* @Last Modified by:   scottxiong
-* @Last Modified time: 2019-07-29 02:47:07
+* @Last Modified by:   sottxiong
+* @Last Modified time: 2019-07-29 02:52:54
 */
 package oss
 
@@ -29,7 +29,7 @@ func init(){
    defer f.Close()
    configuration :=&conf{}
    decoder := json.NewDecoder(f)
-   err :=decoder.Decode(configuration)
+   err =decoder.Decode(configuration)
    if err!=nil{
    	panic(err)
    }

@@ -1,14 +1,15 @@
 /*
 * @Author: scottxiong
 * @Date:   2019-07-28 22:50:07
-* @Last Modified by:   scottxiong
-* @Last Modified time: 2019-07-29 02:43:17
+* @Last Modified by:   sottxiong
+* @Last Modified time: 2019-07-29 02:53:43
 */
 package oss
 
 import (
    "os"
    "fmt"
+   "github.com/aliyun/aliyun-oss-go-sdk/oss"
 )
 
 func ListAll(){
