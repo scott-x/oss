@@ -3,13 +3,14 @@
 * @Date:   2019-07-29 02:30:15
 * @Last Modified by:   scottxiong
 * @Last Modified time: 2019-07-29 02:41:52
-*/
+ */
 package oss
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
+
 //permission: 文件的访问权限优先级高于存储空间的访问权限。例如存储空间的访问权限是私有，而文件的访问权限是公共读写，则所有用户都有该文件的读写权限。如果某个文件没有设置过访问权限，则遵循存储空间的访问权限。
 /*
 1 继承Bucket	文件遵循存储空间的访问权限。oss.ACLDefault
@@ -27,7 +28,7 @@ import (
 // 		os.Exit(-1)
 // 	}
 // }
-func GetPermission(obj string){
+func GetPermission(obj string) {
 	// 获取文件的访问权限。
 	aclRes, err := bucket.GetObjectACL(obj)
 	if err != nil {

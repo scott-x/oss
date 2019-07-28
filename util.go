@@ -3,17 +3,18 @@
 * @Date:   2019-07-29 02:39:58
 * @Last Modified by:   sottxiong
 * @Last Modified time: 2019-07-29 04:33:50
-*/
+ */
 package oss
 
 import (
 	"crypto/rand"
+	"fmt"
 	"io"
 	"os"
-	"fmt"
 )
+
 //whether the obj exists or not
-func Exists(obj string) bool{
+func Exists(obj string) bool {
 	// 判断文件是否存在。
 	isExist, err := bucket.IsObjectExist(obj)
 	if err != nil {
@@ -36,5 +37,3 @@ func newUUID() (string, error) {
 	uuid[6] = uuid[6]&^0xf0 | 0x40
 	return fmt.Sprintf("%x-%x-%x-%x-%x", uuid[0:4], uuid[4:6], uuid[6:8], uuid[8:10], uuid[10:]), nil
 }
-
-
