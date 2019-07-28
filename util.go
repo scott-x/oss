@@ -2,13 +2,14 @@
 * @Author: scottxiong
 * @Date:   2019-07-29 02:39:58
 * @Last Modified by:   sottxiong
-* @Last Modified time: 2019-07-29 04:23:12
+* @Last Modified time: 2019-07-29 04:25:29
 */
 package oss
 
 import (
 	"crypto/rand"
 	"io"
+	"os"
 	"fmt"
 )
 //whether the obj exists or not
