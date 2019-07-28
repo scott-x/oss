@@ -23,7 +23,7 @@ import (
 )
 
 func main(){
-	oss.Upload("a.png","a.png")
+	oss.Upload("a.png",true)
 	oss.ListAll()
 }
 ```
