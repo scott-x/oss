@@ -1,8 +1,8 @@
 /*
 * @Author: scottxiong
 * @Date:   2019-07-29 02:32:19
-* @Last Modified by:   scottxiong
-* @Last Modified time: 2019-07-29 02:33:04
+* @Last Modified by:   sottxiong
+* @Last Modified time: 2019-07-29 03:00:06
 */
 package oss
 
@@ -16,7 +16,7 @@ var(
 	// chmod =map[string]interface{}{"0":oss.ACLDefault,"1":oss.ACLPrivate,"2":oss.ACLPublicRead,"3":oss.PublicReadWrite,}
 )
 
-func init(){
+func Connect(){
 	// 创建OSSClient实例。
 	client, err = oss.New(endpoint, accessKeyId, accessKeySecret)
 	if err != nil {
