@@ -2,7 +2,7 @@
 * @Author: scottxiong
 * @Date:   2019-07-29 01:28:21
 * @Last Modified by:   sottxiong
-* @Last Modified time: 2019-07-29 03:18:00
+* @Last Modified time: 2019-07-29 03:36:23
 */
 package oss
 
@@ -39,7 +39,7 @@ func init(){
    if err!=nil{
    	panic(err)
    }
-   fmt.Println(configuration)
+   //fmt.Println(configuration)
 
    endpoint := configuration.Endpoint
    accessKeyId := configuration.AccessKeyId
