@@ -15,7 +15,7 @@ utils based on [aliyun-oss-go-sdk](https://github.com/scott-x/aliyun-oss-go-sdk/
 Then fill in the necessary data
 
 #### 2. use the tool, `main.go`
-```
+```golang
 package main
 
 import (
