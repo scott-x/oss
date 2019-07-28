@@ -2,7 +2,7 @@
 * @Author: scottxiong
 * @Date:   2019-07-29 01:28:21
 * @Last Modified by:   sottxiong
-* @Last Modified time: 2019-07-29 03:13:06
+* @Last Modified time: 2019-07-29 03:18:00
 */
 package oss
 
@@ -41,10 +41,10 @@ func init(){
    }
    fmt.Println(configuration)
 
-   endpoint := GetEP()
-   accessKeyId := GetAK()
-   accessKeySecret := GetAKS()
-   bucketName := GetBN()
+   endpoint := configuration.Endpoint
+   accessKeyId := configuration.AccessKeyId
+   accessKeySecret := configuration.AccessKeySecret
+   bucketName := configuration.BucketName
    client, err = oss.New(endpoint, accessKeyId, accessKeySecret)
    if err != nil {
        handleError(err)
@@ -54,20 +54,4 @@ func init(){
    if err != nil {
        handleError(err)
    }
-}
-
-func GetEP() string{
-	return configuration.Endpoint
-}
-
-func GetAK() string{
-	return configuration.AccessKeyId
-}
-
-func GetAKS() string{
-	return configuration.AccessKeySecret
-}
-
-func GetBN() string{
-	return configuration.BucketName
 }
