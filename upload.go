@@ -1,16 +1,25 @@
 /*
 * @Author: scottxiong
 * @Date:   2019-07-29 02:29:25
-* @Last Modified by:   scottxiong
-* @Last Modified time: 2019-07-29 02:35:09
+* @Last Modified by:   sottxiong
+* @Last Modified time: 2019-07-29 04:34:53
 */
 package oss
 
 import (
 	"os"
 	"fmt"
+	"path"
 )
-func Upload(localFile, newFile string){
+func Upload(localFile string, uuid bool){
+	var newFile string
+	s,_ := newUUID()
+	ext := path.Ext(localFile)
+    if uuid {
+    	newFile= s+ext
+    }else{
+    	newFile=localFile
+    }
 	fd, err := os.Open(localFile)
 	if err != nil {
 		fmt.Println("Error:", err)

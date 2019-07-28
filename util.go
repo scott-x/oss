@@ -2,7 +2,7 @@
 * @Author: scottxiong
 * @Date:   2019-07-29 02:39:58
 * @Last Modified by:   sottxiong
-* @Last Modified time: 2019-07-29 04:25:29
+* @Last Modified time: 2019-07-29 04:33:50
 */
 package oss
 
@@ -24,7 +24,7 @@ func Exists(obj string) bool{
 	return isExist
 }
 
-func NewUUID() (string, error) {
+func newUUID() (string, error) {
 	uuid := make([]byte, 16)
 	n, err := io.ReadFull(rand.Reader, uuid)
 	if n != len(uuid) || err != nil {
