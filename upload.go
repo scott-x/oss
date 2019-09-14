@@ -2,7 +2,7 @@
 * @Author: scottxiong
 * @Date:   2019-07-29 02:29:25
 * @Last Modified by:   scottxiong
-* @Last Modified time: 2019-09-14 15:15:04
+* @Last Modified time: 2019-09-14 15:16:46
  */
 package oss
 
@@ -54,7 +54,7 @@ func Upload(localFile string, uuid bool) string {
 
 	endpoint := configuration.Endpoint
 	bucketName := configuration.BucketName
-	return "https://" + *bucketName + "." + strings.Trim(*endpoint, "http://") + "/" + desFolder + newFile
+	return "https://" + bucketName + "." + strings.Trim(endpoint, "http://") + "/" + newFile
 }
 
 func UploadToSpecificFolder(localFile string, uuid bool, desFolder string) string {
