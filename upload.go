@@ -2,7 +2,7 @@
 * @Author: scottxiong
 * @Date:   2019-07-29 02:29:25
 * @Last Modified by:   scottxiong
-* @Last Modified time: 2019-09-14 14:47:23
+* @Last Modified time: 2019-09-14 15:03:14
  */
 package oss
 
@@ -37,7 +37,8 @@ func Upload(localFile string, uuid bool) string {
 		return ""
 		os.Exit(-1)
 	}
-	return "https://scott-x." + strings.Trim(configuration.Endpoint, "http://") + "/" + newFile
+	fmt.Printf("configuration.Endpoint:%s\n", configuration.Endpoint)
+	return ""
 }
 
 func UploadToSpecificFolder(localFile string, uuid bool, desFolder string) string {
