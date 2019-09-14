@@ -2,7 +2,7 @@
 * @Author: scottxiong
 * @Date:   2019-07-29 02:29:25
 * @Last Modified by:   scottxiong
-* @Last Modified time: 2019-09-14 15:03:14
+* @Last Modified time: 2019-09-14 15:08:52
  */
 package oss
 
@@ -37,7 +37,7 @@ func Upload(localFile string, uuid bool) string {
 		return ""
 		os.Exit(-1)
 	}
-	fmt.Printf("configuration.Endpoint:%s\n", configuration.Endpoint)
+	fmt.Printf("configuration.Endpoint:%s\n", *configuration.Endpoint)
 	return ""
 }
 
